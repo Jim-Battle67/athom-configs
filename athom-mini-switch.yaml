@@ -77,7 +77,7 @@ sensor:
     name: "${friendly_name} WiFi Signal"
     update_interval: 60s
 
-binary_sensor:
+binary_sensorz:
   # Wired switch
   - platform: gpio
     id: the_switch
