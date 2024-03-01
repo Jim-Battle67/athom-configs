@@ -86,13 +86,9 @@ binary_sensor:
     pin:
       number: GPIO14
       mode: INPUT_PULLUP
-    # Trigger on falling edge (switch closes)
-    on_edge:
-      - pin: GPIO14
-        edge: FALLING  # Only trigger on falling edge
-        then:
-          - light.toggle: mini_relay
-          - light.toggle: led
+    on_release:
+      - light.toggle: mini_relay
+      - light.toggle: led
     on_multi_click:
       - timing:
           - ON for at most 0.5s
@@ -105,7 +101,6 @@ binary_sensor:
           - OFF for at most 0.5s
         then:
           - button.press: Reset
-
   # Button on mini switch
   - platform: gpio
     pin:
