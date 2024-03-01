@@ -90,9 +90,9 @@ binary_sensor:
     on_edge:
       - pin: GPIO14
         edge: FALLING  # Only trigger on falling edge
-      then:
-        - light.toggle: mini_relay
-        - light.toggle: led
+        then:
+          - light.toggle: mini_relay
+          - light.toggle: led
     on_multi_click:
       - timing:
           - ON for at most 0.5s
