@@ -66,7 +66,7 @@ light:
   - platform: binary
     id: mini_relay
     output: relay_output
-    name: "Mini Switch"
+    name: "${friendly_name} Mini Switch"
     restore_mode: ${light_restore_mode}
 
 sensor:
